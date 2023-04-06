@@ -1,0 +1,35 @@
+{
+  "name": "Classy",
+  "description": "Classy is an online fundraising platform that enables nonprofits to create custom donation pages, engage with donors, and manage their fundraising efforts. Whether you're using an out-of-the-box implementation or a custom implementation, the Bytespree connector for Classy is able to download all of your Classy data.",
+  "instructions": "<div><p>Classy API uses <strong>Client ID</strong>, <strong>Client Secret</strong>, and your account's <strong>Organization ID</strong> to authenticate access to its API.</p><ol><li>To find the <strong>Organization ID</strong>, please follow these steps:</li><ul><li>Log in to your Classy.org account and go to the Home page.</li><li>Look for the web address in the address bar of your browser.</li><li>The organization ID is the number at the end of the URL after \"org/\".</li><li>For example, if the URL is \"https://www.classy.org/admin/1234/activity\", then the organization ID is \"1234\".</li></ul><li>Client ID and Secret</li><ul><li>Go to the <strong>Apps & Extensions</strong> page from the left sidebar.</li><li>Click the <strong>Classy API</strong> and fill out the required fields.</li><ul><li>Application name: The name of your application</li><li>OAuth2 redirect URL: https://orchestration.bytespree.com/OAuth/callback</li></ul><li>Once you have completed the application form, click on the <strong>Create</strong> button to create your application.</li><li>On the next page, copy the <strong>client_id</strong> and <strong>client_secret</strong> keys.</li></ul><li>In Bytespree, provide the <strong>Organization ID</strong>, <strong>Client ID</strong>, and <strong>Client Secret</strong> you just copied.</li><li>Click \"Connect to Classy\" in Bytespree</li><li>Finish database setup</li></ol></div>",
+  "known_limitations": [],
+  "use_tables": true,
+  "logo_path": "logo.png",
+  "full_replace": true,
+  "settings": [
+    {
+      "name": "org_id",
+      "friendly_name": "Organization ID",
+      "description": "Your Classy Organization ID",
+      "is_secure": false,
+      "is_required": true,
+      "setting_type": "integration"
+    },
+    {
+      "name": "client_id",
+      "friendly_name": "Client ID",
+      "description": "Your Classy API Client ID",
+      "is_secure": false,
+      "is_required": true,
+      "setting_type": "integration"
+    },
+    {
+      "name": "client_secret",
+      "friendly_name": "Client Secret",
+      "description": "Your Classy API Client Secret",
+      "is_secure": true,
+      "is_required": true,
+      "setting_type": "integration"
+    }
+  ]
+}
